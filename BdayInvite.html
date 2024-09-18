@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+    <style>
+        /* Background gradient */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #005f00, #ffffff, #8b4513);
+            background-size: 400% 400%;
+            animation: gradientBackground 10s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        /* Background gradient animation */
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Invitation container */
+        .invitation {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+            max-width: 600px;
+        }
+
+        /* Heading with glowing effect */
+        .heading {
+            font-size: 3em;
+            font-weight: bold;
+            color: #035c07;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #28a745, 0 0 40px #28a745, 0 0 50px #28a745;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        /* Glow animation */
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #28a745, 0 0 40px #28a745, 0 0 50px #28a745; }
+            100% { text-shadow: 0 0 20px #fff, 0 0 30px #28a745, 0 0 40px #28a745, 0 0 50px #28a745, 0 0 60px #28a745; }
+        }
+
+        /* Morphing text animation */
+        .text {
+            font-size: 1.5em;
+            margin: 10px 0;
+            animation: slideIn 2s ease forwards;
+            opacity: 0;
+        }
+
+        /* Slide in animation */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Specific lines delay for effect */
+        .line-1 { animation-delay: 0.5s; }
+        .line-2 { animation-delay: 1s; }
+        .line-3 { animation-delay: 1.5s; }
+        .line-4 { animation-delay: 2s; }
+        .line-5 { animation-delay: 2.5s; }
+        .line-6 { animation-delay: 3s; }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <h1 class="heading">🎉 Princo's Birthday House Party 🎉</h1>
+        <p class="text line-1">VVIP Invitation</p>
+        <p class="text line-2">Location: Donovans</p>
+        <p class="text line-3">Date: October 4th</p>
+        <p class="text line-4">Time: 7:00 PM until...</p>
+        <p class="text line-5">Bring a bottle that matches your top!</p>
+        <p class="text line-6">We gonna drink rum and get messed up all night.</p>
+    </div>
+</body>
+</html>
